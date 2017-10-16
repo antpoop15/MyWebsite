@@ -1,2 +1,0 @@
-# MyWebsite
-A portfolio website
