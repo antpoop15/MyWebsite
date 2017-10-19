@@ -1,5 +1,5 @@
 body{
-  background-color:#eddbcd;
+  background-color:#dddddd;
   padding-bottom: 500px;
 }
 p{
@@ -13,17 +13,16 @@ p{
 }
 
 .bg {
-  background: #eddbcd;
+  background: #dddddd;
   width: 100%;
   height: 45px;
   opacity: .5;
   top:0;
   width: 100%;
-  border-radius: 20px;
 }
 
 .show {
-  background: #eddbcd;
+  background: #dddddd;
   opacity: 1;
   box-shadow: 0px 3px 10px #71717e
 }
@@ -51,7 +50,7 @@ p{
   position: fixed;
   top:0;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 0px;
   left: 0;
   z-index: 1;
 }
@@ -86,9 +85,10 @@ p{
   padding:5px;
   width: 75%;
   margin: 0 auto;
-  background-color: #e26c6c;
+  background-color: #f29898;
   opacity: .8;
-  height: 400px;
+  min-height: 400px;
+  height: auto;
   box-shadow: 0px 5px 20px #71717e;
 }
 
@@ -105,16 +105,20 @@ h1{
   padding:5px;
   width: 75%;
   margin: 0 auto;
-  background-color: #CDCDC0;
+  background-color: #d8e8ff;
   opacity: .8;
-  height: 250px;
+  min-height: 250px;
+  height: auto;
   box-shadow: 0px 5px 20px #71717e;
 }
 
 .text-in-box2{
   font-family:Courier;  
-  padding-left: 25px;
-  padding-right:25px;
+  padding-left: 50px;
+  padding-right:50px;
+}
+.font-in-box{
+  font-family:Courier;
 }
 
 .third-block{
@@ -123,9 +127,10 @@ h1{
   padding:5px;
   width: 75%;
   margin: 0 auto;
-  background-color: #867667;
+  background-color: #AFDEDC;
   opacity: .8;
-  height: 400px;
+  min-height: 400px;
+  height: auto;
   box-shadow: 0px 5px 20px #71717e;
 }
 
@@ -135,45 +140,137 @@ h1{
   padding:5px;
   width: 75%;
   margin: 0 auto;
-  background-color: #CDCDC0;
+  background-color: #f29898;
   opacity: .8;
-  height: 250px;
+  min-height: 250px;
+  height: auto;
   box-shadow: 0px 5px 20px #71717e;
+}
+
+.flipper-box{
+  box-shadow: 0px 5px 20px #71717e;
+  background-color: #e7e3f2;
+  margin-left: 30%;
+}
+.flip-box2{
+  margin-left:50%;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 200px;
+	height: 260px;
+}
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    background-color:#e7e3f2;
+}
+
+.flip-text-front{
+  text-align:center;
+  font-weight:bold;
+  font-family:Courier;
+}
+.flip-text-back{
+  text-align:center;
+  font-family:Courier;
+  font-size:14px;
+}
+
+.button{
+  background-color:#e7e3f2;
+  border: none;
+  color:black;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  width:100%;
+  height:51px;
+  box-shadow: 0px 5px 20px #71717e;
+  
+}
+.button2:hover {
+  box-shadow: 5px 10px 20px #71717e;
+    
 }
 
 .fa {
   padding: 20px;
-  font-size: 30px;
-  width: 30px;
+  font-size: 1000px;
+  width: 40px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 2px 2px;
 }
 
 .fa:hover {
     opacity: 0.7;
 }
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-github{
-  color: #000;
-}
-
-.fa-github {
-    padding:10px 14px;
+.fa-linkedin-square{
+    padding: 10px 20px;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
     transition: .5s;
-    background-color: #CDCDC0;
+  color:white;  
+}
+
+.fa-linkedin-square:hover{
+    background-color: black;
+  color: white;
+  box-shadow: 0px 10px 25px #71717e;
+}
+
+.fa-github {
+    padding: 10px 20px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+  color:white;
 }
 .fa-github:hover {
-    background-color: #0073a4;
+  background-color: black;
   color: white;
-  box-shadow: 0px 5px 20px #71717e;
+  box-shadow: 0px 10px 25px #71717e;
+}
+
+
+
+.nobr{
+  white-space: nowrap;
 }
